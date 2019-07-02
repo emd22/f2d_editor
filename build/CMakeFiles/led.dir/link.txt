@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/led.dir/led/main.c.o  -o led -Wl,-rpath,/home/ethan/Desktop/led/src/../lib /home/ethan/Desktop/led/src/../lib/libfrutti2d.so 
