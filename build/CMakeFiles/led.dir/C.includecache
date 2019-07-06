@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/ethan/Desktop/led/src/../include/led/f2d/draw.h
+/home/ethan/Projects/f2d_editor/src/../include/led/f2d/draw.h
 f2d/texture.h
 -
 f2d/wm/window.h
@@ -14,7 +14,7 @@ f2d/wm/window.h
 f2d/wm/wm.h
 -
 
-/home/ethan/Desktop/led/src/../include/led/f2d/frutti2d.h
+/home/ethan/Projects/f2d_editor/src/../include/led/f2d/frutti2d.h
 f2d/wm/wm.h
 -
 f2d/wm/window.h
@@ -28,19 +28,19 @@ f2d/texture.h
 f2d/shader.h
 -
 
-/home/ethan/Desktop/led/src/../include/led/f2d/macros.h
+/home/ethan/Projects/f2d_editor/src/../include/led/f2d/macros.h
 
-/home/ethan/Desktop/led/src/../include/led/f2d/shader.h
+/home/ethan/Projects/f2d_editor/src/../include/led/f2d/shader.h
 
-/home/ethan/Desktop/led/src/../include/led/f2d/texture.h
+/home/ethan/Projects/f2d_editor/src/../include/led/f2d/texture.h
 
-/home/ethan/Desktop/led/src/../include/led/f2d/wm/events.h
+/home/ethan/Projects/f2d_editor/src/../include/led/f2d/wm/events.h
 f2d/macros.h
 -
 f2d/wm/wm.h
 -
 
-/home/ethan/Desktop/led/src/../include/led/f2d/wm/window.h
+/home/ethan/Projects/f2d_editor/src/../include/led/f2d/wm/window.h
 f2d/macros.h
 -
 f2d/wm/wm.h
@@ -54,7 +54,7 @@ GL/glew.h
 GL/glx.h
 -
 
-/home/ethan/Desktop/led/src/../include/led/f2d/wm/wm.h
+/home/ethan/Projects/f2d_editor/src/../include/led/f2d/wm/wm.h
 f2d/macros.h
 -
 X11/X.h
@@ -62,11 +62,15 @@ X11/X.h
 X11/Xlib.h
 -
 
-/home/ethan/Desktop/led/src/led/main.c
+/home/ethan/Projects/f2d_editor/src/led/main.c
 f2d/frutti2d.h
 -
 stdbool.h
 -
+stdlib.h
+-
 unistd.h
+-
+stdio.h
 -
 

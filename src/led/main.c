@@ -1,7 +1,9 @@
 #include <f2d/frutti2d.h>
-#include <stdbool.h>
 
+#include <stdbool.h>
+#include <stdlib.h>
 #include <unistd.h>
+#include <stdio.h>
 
 #define PLAYER_SPEED 0.3
 
@@ -17,7 +19,13 @@ texture_t bg_tile;
 char *texture_merge(texture_t *s1, texture_t *s2) {
     unsigned width = (s1->x+s1->draw_width)+(s2->x+s2->draw_width);
     unsigned height = (s1->y+s1->draw_height)+(s2->y+s2->draw_height);
-    char *data = malloc(width*height);
+    char *data = malloc(width*height*4);
+    // int base_x = (s1->x >= s2->x) ? s1->x : s2->x;
+    // int base_y = (s1->y >= s2->y) ? s1->y : s2->y;
+    int base_x = s1->x || s2->x;
+    int base_y = s1->y || s2->y;
+    printf("width: %u, height: %u\nbasex: %d, basey: %d\n", width, height, base_x, base_y);
+    return data;
 }
 
 void window_start(void) {
@@ -25,8 +33,8 @@ void window_start(void) {
 }
 
 void setup(void) {
-    shader_id = shader_load("../shaders/tex.vert", "../shaders/tex.frag"); 
-    started = true;
+    shader_id = shader_load("../shaders/tex.vert", "../shaders/tex.frag");
+    printf("shaderid = %u\n", shader_id);
     texture = texture_load("../car.bmp");
     texture.draw_width = 32;
     texture.draw_height = 32;
@@ -34,6 +42,14 @@ void setup(void) {
     texture.draw_scaley = 128;
 
     bg_tile = texture_load("../test.bmp");
+    bg_tile.draw_width = 32;
+    bg_tile.draw_height = 32;
+    bg_tile.draw_scalex = 128;
+    bg_tile.draw_scaley = 128;
+
+    // char *data = texture_merge(&texture, &bg_tile);
+    
+    started = true;
 }
 
 void check_keys(void) {
@@ -45,8 +61,12 @@ void check_keys(void) {
             texture.y += PLAYER_SPEED; 
         else if (ch == 'a')
             texture.x -= PLAYER_SPEED;
+        else if (ch == 's')
+            texture.y -= PLAYER_SPEED;
         else if (ch == 'd')
             texture.x += PLAYER_SPEED;
+        else if (ch == 'q')
+            wm_events_kill();
     }
 }
 
@@ -56,9 +76,16 @@ void on_event(event_t event) {
             wm_events_kill();
             break;
         case EVENT_KEYPRESS:
+            // printf("keypress\n");
             keys = wm_get_pressed_keys(&key_index);
             break;
     }
+}
+
+void cleanup() {
+    texture_delete(&texture);
+    texture_delete(&bg_tile);
+    shader_delete(shader_id);
 }
 
 void draw() {
@@ -75,6 +102,7 @@ int main() {
     f2d_params.wm_start_func       = &setup;
     f2d_params.draw_func           = &draw;
     f2d_params.on_event_func       = &on_event;
+    f2d_params.cleanup_func        = &cleanup;
     f2d_start(f2d_params);
 
     while (!started);
@@ -86,13 +114,14 @@ int main() {
         draw_event.value = 0;
         draw_event.texture = texture;
         draw_push_event(&draw_event);
+        draw_event.texture = bg_tile;
+        draw_push_event(&draw_event);
         usleep(700);
         if (cooldown != 0)
             cooldown--;
     }
 
     f2d_cleanup();
-    shader_delete(shader_id);
-
+    
     return 0;
 }

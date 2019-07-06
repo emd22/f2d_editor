@@ -1,6 +1,14 @@
 {
     "files.associations": {
-        "frutti2d.h": "c"
+        "frutti2d.h": "c",
+        "threads.h": "c",
+        "texture.h": "c",
+        "draw.h": "c",
+        "bmp.h": "c",
+        "wm.h": "c",
+        "macros.h": "c",
+        "events.h": "c",
+        "window.h": "c"
     },
     "git.ignoreLimitWarning": true
 }
