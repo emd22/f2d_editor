@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ethan/Projects/f2d_editor/src
+CMAKE_SOURCE_DIR = /home/ethan/Projects/led/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ethan/Projects/f2d_editor/build
+CMAKE_BINARY_DIR = /home/ethan/Projects/led/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ethan/Projects/f2d_editor/build/CMakeFiles /home/ethan/Projects/f2d_editor/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ethan/Projects/led/build/CMakeFiles /home/ethan/Projects/led/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ethan/Projects/f2d_editor/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ethan/Projects/led/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

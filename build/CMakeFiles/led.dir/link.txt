@@ -1,1 +1,1 @@
-/usr/bin/cc     CMakeFiles/led.dir/led/main.c.o  -o led -Wl,-rpath,/home/ethan/Projects/f2d_editor/src/../lib /home/ethan/Projects/f2d_editor/src/../lib/libfrutti2d.so 
+/usr/bin/cc     CMakeFiles/led.dir/led/main.c.o  -o led -Wl,-rpath,/home/ethan/Projects/led/src/../lib /home/ethan/Projects/led/src/../lib/libfrutti2d.so /usr/lib/x86_64-linux-gnu/libGLU.so /usr/lib/x86_64-linux-gnu/libGL.so /usr/lib/x86_64-linux-gnu/libGLEW.so 

@@ -4,14 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/ethan/Projects/f2d_editor/src/led/main.c" "/home/ethan/Projects/f2d_editor/build/CMakeFiles/led.dir/led/main.c.o"
+  "/home/ethan/Projects/led/src/led/main.c" "/home/ethan/Projects/led/build/CMakeFiles/led.dir/led/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
-  "/home/ethan/Projects/f2d_editor/src/../include"
-  "/home/ethan/Projects/f2d_editor/src/../include/led"
+  "/home/ethan/Projects/led/src/../include"
+  "/home/ethan/Projects/led/src/../include/led"
   )
 
 # Targets to which this target links.

@@ -6,5 +6,5 @@ C_FLAGS =   -g -Wall -Wpedantic
 
 C_DEFINES = 
 
-C_INCLUDES = -I/home/ethan/Projects/f2d_editor/src/../include -I/home/ethan/Projects/f2d_editor/src/../include/led 
+C_INCLUDES = -I/home/ethan/Projects/led/src/../include -I/home/ethan/Projects/led/src/../include/led 
 
