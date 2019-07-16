@@ -9,7 +9,6 @@
 #include <f2d/shader.h>
 #include <f2d/error.h>
 #include <f2d/model.h>
-#include <f2d/camera.h>
 
 #define FUNC_WM_START_SETUP 0
 #define FUNC_WM_START       1

@@ -6,6 +6,8 @@
 
 #IncludeRegexTransform: 
 
+/home/ethan/Projects/led/src/../include/led/f2d/camera.h
+
 /home/ethan/Projects/led/src/../include/led/f2d/draw.h
 f2d/texture.h
 -
@@ -13,6 +15,8 @@ f2d/wm/window.h
 -
 f2d/wm/wm.h
 -
+
+/home/ethan/Projects/led/src/../include/led/f2d/error.h
 
 /home/ethan/Projects/led/src/../include/led/f2d/frutti2d.h
 f2d/wm/wm.h
@@ -27,8 +31,16 @@ f2d/texture.h
 -
 f2d/shader.h
 -
+f2d/error.h
+-
+f2d/model.h
+-
+f2d/camera.h
+-
 
 /home/ethan/Projects/led/src/../include/led/f2d/macros.h
+
+/home/ethan/Projects/led/src/../include/led/f2d/model.h
 
 /home/ethan/Projects/led/src/../include/led/f2d/shader.h
 

@@ -1,7 +1,7 @@
-//#version 460
+#version 330
 
-// out vec3 colour0;
+out vec4 outColour;
 
 void main() {
-    // color = vec3(1,0,0);
+    outColour = vec4(0.0, 1.0, 1.0, 1.0);
 }

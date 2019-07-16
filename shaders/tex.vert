@@ -1,8 +1,8 @@
-//#version 460
+#version 330
 
-// attribute vec2 position;
+layout(location = 0) in vec3 vertPos;
 
 void main() {
-    //                   x, y     z ,  w
-    //gl_Position = vec4(position, 0.0, 1.0);
+    gl_Position.xyz = vertPos;
+    gl_Position.w = 1.0;
 }
