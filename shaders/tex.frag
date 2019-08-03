@@ -1,7 +1,11 @@
-#version 330
+#version 320 es
 
-out vec4 outColour;
+precision mediump float;
+precision highp int;
+
+out vec3 color;
 
 void main() {
-    outColour = vec4(0.0, 1.0, 1.0, 1.0);
+    color = vec3(1, 0, 1);
 }
+

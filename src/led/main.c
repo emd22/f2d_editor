@@ -45,7 +45,6 @@ void setup(void *arg) {
          0.0f,  1.0f, 0.0f,
     };
     model = model_init(vertex_buffer, 3);
-    camera_lookat();
     // printf("shaderid = %u\n", shader_id);
     // texture = texture_load("../car.bmp");
     // bg_tile.draw_width = 32;
@@ -117,6 +116,7 @@ void draw(void *arg) {
 }
 
 void draw_callback(void) {
+    //camera_lookat(shader_id);
     model_draw(&model);
     // printf("drawn somewhere\n");
 }
